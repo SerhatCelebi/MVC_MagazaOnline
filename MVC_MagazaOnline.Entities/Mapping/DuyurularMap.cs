@@ -17,11 +17,11 @@ namespace MVC_MagazaOnline.Entities.Mapping
             this.HasKey(x => x.Id);//primary key
             this.Property(x => x.Id).HasDatabaseGeneratedOption(DatabaseGeneratedOption.Identity);//identity özelliği
             this.Property(x => x.Baslik).HasColumnType("varchar");//sütun tipi
-            this.Property(x => x.Baslik).IsRequired().HasMaxLength(50);//zorunlu ve max 50 karakter
+            
             this.Property(x => x.Duyuru).HasColumnType("varchar");
-            this.Property(x => x.Duyuru).IsRequired().HasMaxLength(300);
+            
             this.Property(x => x.Aciklama).HasColumnType("varchar");
-            this.Property(x => x.Aciklama).IsRequired().HasMaxLength(50);
+            
             this.Property(x => x.Id).HasColumnName("Id");//sütun adı
             this.Property(x => x.Baslik).HasColumnName("Baslik");
             this.Property(x => x.Duyuru).HasColumnName("Duyuru");

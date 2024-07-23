@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MVC_MagazaOnline.Entities.Mapping;
+using System;
 using System.Collections.Generic;
 using System.Data.Entity;
 using System.Linq;
@@ -26,16 +27,16 @@ namespace MVC_MagazaOnline.Entities.Model.Context
         public DbSet<Satislar> Satislar { get; set; }
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
-            modelBuilder.Configurations.Add(new Mapping.DuyurularMap());
-            modelBuilder.Configurations.Add(new Mapping.IletisimMap());
-            modelBuilder.Configurations.Add(new Mapping.HakkimizdaMap());
-            modelBuilder.Configurations.Add(new Mapping.KategorilerMap());
-            modelBuilder.Configurations.Add(new Mapping.KiyafetlerMap());
-            modelBuilder.Configurations.Add(new Mapping.KullaniciHareketleriMap());
-            modelBuilder.Configurations.Add(new Mapping.KullanicilarMap());
-            modelBuilder.Configurations.Add(new Mapping.KullaniciRolleriMap());
-            modelBuilder.Configurations.Add(new Mapping.RollerMap());
-            modelBuilder.Configurations.Add(new Mapping.SatislarMap());
+            modelBuilder.Configurations.Add(new DuyurularMap());
+            modelBuilder.Configurations.Add(new IletisimMap());
+            modelBuilder.Configurations.Add(new HakkimizdaMap());
+            modelBuilder.Configurations.Add(new KategorilerMap());
+            modelBuilder.Configurations.Add(new KiyafetlerMap());
+            modelBuilder.Configurations.Add(new KullaniciHareketleriMap());
+            modelBuilder.Configurations.Add(new KullanicilarMap());
+            modelBuilder.Configurations.Add(new KullaniciRolleriMap());
+            modelBuilder.Configurations.Add(new RollerMap());
+            modelBuilder.Configurations.Add(new SatislarMap());
             
         }
 
